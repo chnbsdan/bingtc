@@ -21,10 +21,11 @@ def downloads(url):
         json_data['images'][0]['url'].split("&")[0])
     start_date = json_data['images'][0]['startdate']
     
-    # 确保 webp 文件夹存在
+    # ===== 一次性创建所有需要的目录 =====
     os.makedirs('./webp', exist_ok=True)
-    # 确保 json 文件夹存在（新增）
     os.makedirs('./json', exist_ok=True)
+    os.makedirs('./1080pimages', exist_ok=True)
+    os.makedirs('./images', exist_ok=True)
     
     # 保存 JSON
     open(f'./json/{start_date}.json', 'wb').write(requests.get(url=url, headers=headers).content)
