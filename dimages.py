@@ -23,6 +23,8 @@ def downloads(url):
     
     # 确保 webp 文件夹存在
     os.makedirs('./webp', exist_ok=True)
+    # 确保 json 文件夹存在（新增）
+    os.makedirs('./json', exist_ok=True)
     
     # 保存 JSON
     open(f'./json/{start_date}.json', 'wb').write(requests.get(url=url, headers=headers).content)
