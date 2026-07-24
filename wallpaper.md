@@ -1,3 +1,9 @@
+---
+title: wallpaper
+date: 2022-01-01 19:24:56
+type: 'gallery'
+---
+
 ![Family, in full color](https://cn.bing.com/th?id=OHR.GalapagosFlamingos_EN-US0364264116_UHD.jpg&w=1000) Today:[Flock of American flamingos, Isabela Island, Galápagos Islands, Ecuador (© Tui De Roy/Nature Picture Library)](https://cn.bing.com/th?id=OHR.GalapagosFlamingos_EN-US0364264116_UHD.jpg)
 
 |      |      |      |
