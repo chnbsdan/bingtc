@@ -1,4 +1,4 @@
-// _worker.js - 首页 + API 合并
+// _worker.js - 首页 + API 合并（完整版）
 export default {
   async fetch(request) {
     const url = new URL(request.url);
@@ -371,7 +371,7 @@ export default {
     }
     .modal.active .zoom-hint { opacity: 1; }
     .modal-caption {
-      position: fixed;
+      position: absolute;
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
@@ -381,26 +381,17 @@ export default {
       padding: 8px 20px;
       border-radius: 30px;
       backdrop-filter: blur(4px);
-      z-index: 1010;
+      z-index: 10;
       pointer-events: none;
       text-align: center;
-      max-width: 80vw;
+      max-width: 80%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       opacity: 0;
-      transition: opacity 0.5s ease 0.3s;
+      transition: opacity 0.3s ease;
     }
-    .modal.active .modal-caption { opacity: 1; }
-    @media (max-width: 768px) {
-      .modal-nav { width: 40px; height: 40px; font-size: 1.2rem; }
-      .modal-nav-left { left: 8px; }
-      .modal-nav-right { right: 8px; }
-      .modal-close { top: 16px; left: 16px; width: 38px; height: 38px; font-size: 1.2rem; }
-      .zoom-hint { font-size: 0.7rem; padding: 4px 12px; bottom: 15px; }
-      .modal-caption { bottom: 60px; font-size: 0.8rem; padding: 4px 14px; max-width: 90vw; white-space: normal; }
-      .modal-img { max-width: 95vw; max-height: 80vh; }
-    }
+    .modal-img-container:hover .modal-caption { opacity: 1; }
     .modal-img-container {
       position: relative;
       max-width: 90vw;
@@ -415,6 +406,15 @@ export default {
       justify-content: center;
     }
     .modal-img-container:active { cursor: grabbing; }
+    @media (max-width: 768px) {
+      .modal-nav { width: 40px; height: 40px; font-size: 1.2rem; }
+      .modal-nav-left { left: 8px; }
+      .modal-nav-right { right: 8px; }
+      .modal-close { top: 16px; left: 16px; width: 38px; height: 38px; font-size: 1.2rem; }
+      .zoom-hint { font-size: 0.7rem; padding: 4px 12px; bottom: 15px; }
+      .modal-caption { bottom: 12px; font-size: 0.75rem; padding: 4px 12px; max-width: 85%; white-space: normal; }
+      .modal-img { max-width: 95vw; max-height: 80vh; }
+    }
     footer {
       background: var(--bg-yiyan);
       color: var(--text-muted);
@@ -723,17 +723,107 @@ export default {
     if (path === '/api') {
       const html = `<!DOCTYPE html>
 <html lang="zh">
-<head><meta charset="UTF-8"><title>图片 API 服务</title>
-<style>
-body { font-family: system-ui; max-width: 720px; margin: 2rem auto; padding: 1rem; line-height: 1.6; }
-h1 { color: #333; }
-code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 4px; }
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片 API 服务</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      max-width: 780px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      line-height: 1.8;
+      color: #1a1a2e;
+      background: #f8f9fa;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #16213e;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .subtitle {
+      color: #6c757d;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #4a90d9;
+      padding-left: 1rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid #e9ecef;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .card h2 {
+      font-size: 1.1rem;
+      color: #4a90d9;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .card p { margin: 0.25rem 0; color: #343a40; }
+    .card code {
+      background: #f1f3f5;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #d63384;
+      word-break: break-all;
+    }
+    .card .label {
+      display: inline-block;
+      background: #e9ecef;
+      padding: 0.1rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      color: #495057;
+      margin-left: 0.5rem;
+    }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e9ecef;
+      text-align: center;
+      color: #868e96;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 500px) {
+      body { margin: 1.5rem auto; }
+      .card { padding: 1rem 1.25rem; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
-<h1>📷 图片 API 服务</h1>
-<p><code>${base}/api/random</code> → 随机图片</p>
-<p><code>${base}/api/daily</code> → 今日图片</p>
+  <h1>📷 图片 API 服务</h1>
+  <div class="subtitle">提供随机图像和每日图像接口，基于 Bing 每日壁纸</div>
+  <div class="card">
+    <h2>🎲 /api/random</h2>
+    <p><code>${base}/api/random</code> → 返回随机图片</p>
+    <p><code>${base}/api/random?redirect=true</code> → 302 重定向到随机图片</p>
+  </div>
+  <div class="card">
+    <h2>📅 /api/daily</h2>
+    <p><code>${base}/api/daily</code> → 返回今日图片 (WebP)</p>
+    <p><code>${base}/api/daily?format=jpeg</code> → 返回 JPEG 格式</p>
+    <p><code>${base}/api/daily?format=original</code> → 返回原始 JPEG</p>
+    <p><code>${base}/api/daily?redirect=true</code> → 302 重定向到今日图片</p>
+  </div>
+  <div class="card">
+    <h2>ℹ️ 使用说明</h2>
+    <p>所有图片来自 Bing 每日壁纸，仅限个人使用。</p>
+    <p>数据更新时间：每日 12:00 (UTC+8)</p>
+  </div>
+  <div class="footer">Powered by Cloudflare Workers &middot; <a href="${base}" style="color: #4a90d9; text-decoration: none;">返回首页</a></div>
 </body>
 </html>`;
       return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
@@ -742,7 +832,7 @@ code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 4px; }
     // ===== 随机图片 =====
     if (path === '/api/random') {
       try {
-        const resp = await fetch(`${base}/webp/index.json`);
+        const resp = await fetch(base + '/webp/index.json');
         if (!resp.ok) {
           return new Response('Failed to load index.json', { status: 502 });
         }
@@ -755,11 +845,14 @@ code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 4px; }
         if (redirect) {
           return Response.redirect(randomImage.path, 302);
         }
-        const imgResp = await fetch(`${base}${randomImage.path}`);
+        const imgResp = await fetch(base + randomImage.path);
         return new Response(imgResp.body, {
-          headers: { 'Content-Type': 'image/webp', 'Cache-Control': 'public, max-age=10800' }
+          headers: {
+            'Content-Type': 'image/webp',
+            'Cache-Control': 'public, max-age=10800'
+          }
         });
-      } catch {
+      } catch (error) {
         return new Response('Internal Server Error', { status: 500 });
       }
     }
@@ -769,7 +862,7 @@ code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 4px; }
       try {
         const format = url.searchParams.get('format') || 'webp';
         const redirect = url.searchParams.get('redirect') === 'true';
-        let imagePath;
+        var imagePath;
         if (format === 'jpeg') {
           imagePath = '/webp/daily.jpeg';
         } else if (format === 'original') {
@@ -780,12 +873,18 @@ code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 4px; }
         if (redirect) {
           return Response.redirect(imagePath, 302);
         }
-        const imgResp = await fetch(`${base}${imagePath}`);
+        const imgResp = await fetch(base + imagePath);
+        if (!imgResp.ok) {
+          return new Response('Failed to fetch image', { status: 502 });
+        }
         const contentType = format === 'webp' ? 'image/webp' : 'image/jpeg';
         return new Response(imgResp.body, {
-          headers: { 'Content-Type': contentType, 'Cache-Control': 'public, max-age=10800' }
+          headers: {
+            'Content-Type': contentType,
+            'Cache-Control': 'public, max-age=10800'
+          }
         });
-      } catch {
+      } catch (error) {
         return new Response('Internal Server Error', { status: 500 });
       }
     }
