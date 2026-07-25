@@ -2,7 +2,7 @@ import tool
 
 def create():
     imginfo = tool.get_date()
-    with open('README.md', 'w+') as fw:
+    with open('GALLERY.md', 'w+') as fw:
         fw.write(imginfo[0] + '\n\n')
         fw.write('|      |      |      |\n')
         fw.write('| :----: | :----: | :----: |\n')
@@ -15,7 +15,7 @@ def create():
                 fw.write("|\n")
         if (len(tool.get_list()) % 3 != 0):
             fw.write('|')
-        print(f'Create README.md Success!')
+        print(f'Create GALLERY.md Success!')
 
     # 改成 'a+' 模式，文件不存在则创建
     with open('bing-url.md', 'a+') as fi:
@@ -31,7 +31,7 @@ def create():
         fw.write("date: 2022-01-01 19:24:56" + '\n')
         fw.write("type: 'gallery'" + '\n')
         fw.write("---" + '\n\n')
-        with open('README.md', 'r') as fi:
+        with open('GALLERY.md', 'r') as fi:
             content = fi.read()
         fw.write(content)
         print(f'Create wallpaper.md Success!')
