@@ -43,7 +43,7 @@ def downloads(url):
             if img.mode in ('RGBA', 'LA'):
                 img = img.convert('RGB')
             
-            # 生成 WebP（日期命名）
+            # 生成 WebP
             webp_path = f'./webp/{start_date}.webp'
             img.save(webp_path, 'WEBP', quality=85, method=6)
             shutil.copyfile(webp_path, f'./webp/latest.webp')
@@ -62,7 +62,7 @@ def downloads(url):
     else:
         print(f'Create {start_date} 1080P_PNG Failed!')
     
-    # 生成 index.json（包含 copyright）
+    # 生成 index.json
     generate_index_json()
     
     return
@@ -80,10 +80,9 @@ def generate_index_json():
         if filename.endswith('.webp') and filename != 'latest.webp' and filename != 'daily.jpeg' and filename != 'original.jpeg':
             date_str = filename.replace('.webp', '')
             if len(date_str) == 8 and date_str.isdigit():
-                # 格式化日期显示
                 formatted_date = date_str[:4] + '-' + date_str[4:6] + '-' + date_str[6:8]
-                # 从 json 目录读取版权信息
                 copyright_text = ''
+                image_url = ''
                 json_path = os.path.join(json_dir, f'{date_str}.json')
                 if os.path.exists(json_path):
                     try:
@@ -91,6 +90,9 @@ def generate_index_json():
                             data = json.load(f)
                             if data.get('images') and len(data['images']) > 0:
                                 copyright_text = data['images'][0].get('copyright', '')
+                                urlbase = data['images'][0].get('urlbase', '')
+                                if urlbase:
+                                    image_url = f'https://www.bing.com{urlbase}_UHD.jpg'
                     except Exception as e:
                         print(f'读取 {json_path} 失败: {e}')
                 
@@ -99,7 +101,7 @@ def generate_index_json():
                     'date': formatted_date,
                     'path': f'/webp/{filename}',
                     'copyright': copyright_text,
-                    'url': ''
+                    'url': image_url
                 })
     
     images.sort(key=lambda x: x['date'], reverse=True)
