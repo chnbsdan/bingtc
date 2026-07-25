@@ -522,12 +522,21 @@
         if (!imageData.length) return;
         currentIndex = (index + imageData.length) % imageData.length;
         var item = imageData[currentIndex];
-        modalImage.src = window.location.origin + '/webp/' + item.startdate + '.webp';
-        modalImage.alt = item.startdate;
-        var formattedDate = item.startdate.slice(0, 4) + '-' + item.startdate.slice(4, 6) + '-' + item.startdate.slice(6, 8);
-        var displayText = formattedDate;
-        if (item.copyright) {
+        // 使用 date 字段（已格式化），如果没有则用 startdate
+        var dateStr = item.date || item.startdate || '';
+        // 如果 dateStr 是 8 位数字，格式化
+        if (/^\d{8}$/.test(dateStr)) {
+          dateStr = dateStr.slice(0, 4) + '-' + dateStr.slice(4, 6) + '-' + dateStr.slice(6, 8);
+        }
+        // 图片文件名
+        var fileName = item.filename || item.startdate + '.webp';
+        modalImage.src = window.location.origin + '/webp/' + fileName;
+        modalImage.alt = dateStr;
+        var displayText = dateStr;
+        if (item.copyright && item.copyright.length > 0) {
           displayText += ' - ' + item.copyright;
+        } else {
+          displayText += ' - 每日精选';
         }
         modalCaption.textContent = displayText;
         resetTransform();
@@ -682,8 +691,16 @@
         }
       }
 
-      function formatDate(startdate) {
-        return startdate.slice(0, 4) + '-' + startdate.slice(4, 6) + '-' + startdate.slice(6, 8);
+      function getDisplayDate(item) {
+        var dateStr = item.date || item.startdate || '';
+        if (/^\d{8}$/.test(dateStr)) {
+          return dateStr.slice(0, 4) + '-' + dateStr.slice(4, 6) + '-' + dateStr.slice(6, 8);
+        }
+        return dateStr;
+      }
+
+      function getFileName(item) {
+        return item.filename || item.startdate + '.webp';
       }
 
       function renderImages(data) {
@@ -693,9 +710,9 @@
         }
         var today = data[0];
         var heroImg = document.getElementById("hero-img");
-        document.getElementById("hero-date").textContent = formatDate(today.startdate);
+        document.getElementById("hero-date").textContent = getDisplayDate(today);
         document.getElementById("hero-copy").textContent = today.copyright || '每日精选';
-        loadImage(heroImg, window.location.origin + '/webp/' + today.startdate + '.webp');
+        loadImage(heroImg, window.location.origin + '/webp/' + getFileName(today));
 
         var historyEl = document.getElementById("history");
         historyEl.innerHTML = '';
@@ -707,12 +724,12 @@
             card.style.transform = "translateY(50px)";
             card.style.transition = "opacity 1.0s cubic-bezier(.4,2,.6,1), transform 1.0s cubic-bezier(.4,2,.6,1)";
             var img = document.createElement("img");
-            img.alt = formatDate(item.startdate);
+            img.alt = getDisplayDate(item);
             img.className = "img-loading";
             img.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMmQyZDJkIi8+PC9zdmc+";
             var dateLabel = document.createElement("div");
             dateLabel.className = "date-label";
-            dateLabel.textContent = formatDate(item.startdate);
+            dateLabel.textContent = getDisplayDate(item);
             var copyText = document.createElement("div");
             copyText.className = "copy-text";
             copyText.textContent = item.copyright || '';
@@ -720,7 +737,7 @@
             card.appendChild(dateLabel);
             card.appendChild(copyText);
             historyEl.appendChild(card);
-            loadImage(img, window.location.origin + '/webp/' + item.startdate + '.webp');
+            loadImage(img, window.location.origin + '/webp/' + getFileName(item));
             card.addEventListener("click", function() { openModal(index); });
             setTimeout(function() { card.style.opacity = "1"; card.style.transform = "translateY(0)"; }, 50);
           }, index * 80);
