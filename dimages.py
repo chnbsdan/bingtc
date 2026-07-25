@@ -26,40 +26,45 @@ def downloads(url):
     
     # ===== 遍历所有图片 =====
     for idx, image in enumerate(json_data.get('images', [])):
+        # ===== 用 enddate 代替 startdate =====
+        date_key = image.get('enddate', image.get('startdate', ''))
+        if not date_key:
+            print(f'跳过第 {idx+1} 张图片：无日期')
+            continue
+        
         pic_url = r'https://cn.bing.com{0}'.format(image['url'].split("&")[0])
-        start_date = image['startdate']
         
-        print(f'处理第 {idx+1} 张图片: {start_date}')
+        print(f'处理第 {idx+1} 张图片: {date_key}')
         
-        # 保存单独的 JSON（不带 full_ 前缀）
+        # 保存单独的 JSON
         try:
             single_json_url = f'https://www.bing.com/HPImageArchive.aspx?format=js&idx={idx}&n=1&mkt=zh-CN'
             resp = requests.get(single_json_url, headers=headers)
-            with open(f'./json/{start_date}.json', 'wb') as f:
+            with open(f'./json/{date_key}.json', 'wb') as f:
                 f.write(resp.content)
-            print(f'保存 {start_date}.json')
+            print(f'保存 {date_key}.json')
         except Exception as e:
-            print(f'保存 {start_date}.json 失败: {e}')
+            print(f'保存 {date_key}.json 失败: {e}')
         
         # 下载原图到 images/ 目录
         pic = requests.get(pic_url, stream=True)
         if pic.status_code == 200:
-            with open(f'./images/{start_date}.png', 'wb') as f:
+            with open(f'./images/{date_key}.png', 'wb') as f:
                 f.write(pic.content)
-            shutil.copyfile(f'./images/{start_date}.png', f'./images/latest.png')
-            print(f'Create {start_date} Original Image Success!')
+            shutil.copyfile(f'./images/{date_key}.png', f'./images/latest.png')
+            print(f'Create {date_key} Original Image Success!')
         else:
-            print(f'Create {start_date} Original Image Failed!')
+            print(f'Create {date_key} Original Image Failed!')
             continue
         
         # 下载 1080p 图片并转换为 WebP
         pic_1080p = requests.get(validate_title(pic_url), stream=True)
         if pic_1080p.status_code == 200:
-            png_1080p_path = f'./1080pimages/{start_date}.png'
+            png_1080p_path = f'./1080pimages/{date_key}.png'
             with open(png_1080p_path, 'wb') as f:
                 f.write(pic_1080p.content)
             shutil.copyfile(png_1080p_path, f'./1080pimages/latest.png')
-            print(f'Create {start_date} 1080P_PNG Success!')
+            print(f'Create {date_key} 1080P_PNG Success!')
             
             try:
                 img = Image.open(png_1080p_path)
@@ -67,10 +72,10 @@ def downloads(url):
                     img = img.convert('RGB')
                 
                 # 生成 WebP
-                webp_path = f'./webp/{start_date}.webp'
+                webp_path = f'./webp/{date_key}.webp'
                 img.save(webp_path, 'WEBP', quality=85, method=6)
                 shutil.copyfile(webp_path, f'./webp/latest.webp')
-                print(f'Create {start_date} WebP Success!')
+                print(f'Create {date_key} WebP Success!')
                 
                 # 只对最新的图片（idx==0）生成 daily.jpeg 和 original.jpeg
                 if idx == 0:
@@ -81,7 +86,7 @@ def downloads(url):
             except Exception as e:
                 print(f'Create files Failed: {e}')
         else:
-            print(f'Create {start_date} 1080P_PNG Failed!')
+            print(f'Create {date_key} 1080P_PNG Failed!')
     
     # 生成 index.json
     generate_index_json()
