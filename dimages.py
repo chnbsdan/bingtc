@@ -24,12 +24,6 @@ def downloads(url):
     os.makedirs('./1080pimages', exist_ok=True)
     os.makedirs('./images', exist_ok=True)
     
-    # ===== 保存完整的 JSON 响应（包含多张图片） =====
-    full_json_path = f'./json/full_{datetime.now().strftime("%Y%m%d")}.json'
-    with open(full_json_path, 'w', encoding='utf-8') as f:
-        json.dump(json_data, f, ensure_ascii=False, indent=2)
-    print(f'保存完整 JSON: {full_json_path}')
-    
     # ===== 遍历所有图片 =====
     for idx, image in enumerate(json_data.get('images', [])):
         pic_url = r'https://cn.bing.com{0}'.format(image['url'].split("&")[0])
@@ -37,26 +31,33 @@ def downloads(url):
         
         print(f'处理第 {idx+1} 张图片: {start_date}')
         
-        # 保存单独的 JSON
-        open(f'./json/{start_date}.json', 'wb').write(
-            requests.get(f'https://www.bing.com/HPImageArchive.aspx?format=js&idx={idx}&n=1&mkt=zh-CN', headers=headers).content
-        )
+        # 保存单独的 JSON（不带 full_ 前缀）
+        try:
+            single_json_url = f'https://www.bing.com/HPImageArchive.aspx?format=js&idx={idx}&n=1&mkt=zh-CN'
+            resp = requests.get(single_json_url, headers=headers)
+            with open(f'./json/{start_date}.json', 'wb') as f:
+                f.write(resp.content)
+            print(f'保存 {start_date}.json')
+        except Exception as e:
+            print(f'保存 {start_date}.json 失败: {e}')
         
-        # 下载原图
+        # 下载原图到 images/ 目录
         pic = requests.get(pic_url, stream=True)
         if pic.status_code == 200:
-            open(f'./images/{start_date}.png', 'wb').write(pic.content)
+            with open(f'./images/{start_date}.png', 'wb') as f:
+                f.write(pic.content)
             shutil.copyfile(f'./images/{start_date}.png', f'./images/latest.png')
             print(f'Create {start_date} Original Image Success!')
         else:
             print(f'Create {start_date} Original Image Failed!')
             continue
         
-        # 下载 1080p 并转换 WebP
+        # 下载 1080p 图片并转换为 WebP
         pic_1080p = requests.get(validate_title(pic_url), stream=True)
         if pic_1080p.status_code == 200:
             png_1080p_path = f'./1080pimages/{start_date}.png'
-            open(png_1080p_path, 'wb').write(pic_1080p.content)
+            with open(png_1080p_path, 'wb') as f:
+                f.write(pic_1080p.content)
             shutil.copyfile(png_1080p_path, f'./1080pimages/latest.png')
             print(f'Create {start_date} 1080P_PNG Success!')
             
@@ -65,12 +66,13 @@ def downloads(url):
                 if img.mode in ('RGBA', 'LA'):
                     img = img.convert('RGB')
                 
+                # 生成 WebP
                 webp_path = f'./webp/{start_date}.webp'
                 img.save(webp_path, 'WEBP', quality=85, method=6)
                 shutil.copyfile(webp_path, f'./webp/latest.webp')
                 print(f'Create {start_date} WebP Success!')
                 
-                # daily.jpeg 用最新的图片
+                # 只对最新的图片（idx==0）生成 daily.jpeg 和 original.jpeg
                 if idx == 0:
                     img.save('./webp/daily.jpeg', 'JPEG', quality=95, optimize=True)
                     img.save('./webp/original.jpeg', 'JPEG', quality=100)
