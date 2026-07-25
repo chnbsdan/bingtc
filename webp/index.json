@@ -1,144 +1,249 @@
 {
   "images": [
     {
-      "startdate": "20260724",
-      "path": "/webp/20260724.webp"
+      "filename": "20260724.webp",
+      "date": "2026-07-24",
+      "path": "/webp/20260724.webp",
+      "copyright": "Flock of American flamingos, Isabela Island, Galápagos Islands, Ecuador (© Tui De Roy/Nature Picture Library)",
+      "url": "https://www.bing.com/th?id=OHR.GalapagosFlamingos_EN-US0364264116_UHD.jpg"
     },
     {
-      "startdate": "20260723",
-      "path": "/webp/20260723.webp"
+      "filename": "20260723.webp",
+      "date": "2026-07-23",
+      "path": "/webp/20260723.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260722",
-      "path": "/webp/20260722.webp"
+      "filename": "20260722.webp",
+      "date": "2026-07-22",
+      "path": "/webp/20260722.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260721",
-      "path": "/webp/20260721.webp"
+      "filename": "20260721.webp",
+      "date": "2026-07-21",
+      "path": "/webp/20260721.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260720",
-      "path": "/webp/20260720.webp"
+      "filename": "20260720.webp",
+      "date": "2026-07-20",
+      "path": "/webp/20260720.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260719",
-      "path": "/webp/20260719.webp"
+      "filename": "20260719.webp",
+      "date": "2026-07-19",
+      "path": "/webp/20260719.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260718",
-      "path": "/webp/20260718.webp"
+      "filename": "20260718.webp",
+      "date": "2026-07-18",
+      "path": "/webp/20260718.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260717",
-      "path": "/webp/20260717.webp"
+      "filename": "20260717.webp",
+      "date": "2026-07-17",
+      "path": "/webp/20260717.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260716",
-      "path": "/webp/20260716.webp"
+      "filename": "20260716.webp",
+      "date": "2026-07-16",
+      "path": "/webp/20260716.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260715",
-      "path": "/webp/20260715.webp"
+      "filename": "20260715.webp",
+      "date": "2026-07-15",
+      "path": "/webp/20260715.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260714",
-      "path": "/webp/20260714.webp"
+      "filename": "20260714.webp",
+      "date": "2026-07-14",
+      "path": "/webp/20260714.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260713",
-      "path": "/webp/20260713.webp"
+      "filename": "20260713.webp",
+      "date": "2026-07-13",
+      "path": "/webp/20260713.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260712",
-      "path": "/webp/20260712.webp"
+      "filename": "20260712.webp",
+      "date": "2026-07-12",
+      "path": "/webp/20260712.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260711",
-      "path": "/webp/20260711.webp"
+      "filename": "20260711.webp",
+      "date": "2026-07-11",
+      "path": "/webp/20260711.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260710",
-      "path": "/webp/20260710.webp"
+      "filename": "20260710.webp",
+      "date": "2026-07-10",
+      "path": "/webp/20260710.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260709",
-      "path": "/webp/20260709.webp"
+      "filename": "20260709.webp",
+      "date": "2026-07-09",
+      "path": "/webp/20260709.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260708",
-      "path": "/webp/20260708.webp"
+      "filename": "20260708.webp",
+      "date": "2026-07-08",
+      "path": "/webp/20260708.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260707",
-      "path": "/webp/20260707.webp"
+      "filename": "20260707.webp",
+      "date": "2026-07-07",
+      "path": "/webp/20260707.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260706",
-      "path": "/webp/20260706.webp"
+      "filename": "20260706.webp",
+      "date": "2026-07-06",
+      "path": "/webp/20260706.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260705",
-      "path": "/webp/20260705.webp"
+      "filename": "20260705.webp",
+      "date": "2026-07-05",
+      "path": "/webp/20260705.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260704",
-      "path": "/webp/20260704.webp"
+      "filename": "20260704.webp",
+      "date": "2026-07-04",
+      "path": "/webp/20260704.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260703",
-      "path": "/webp/20260703.webp"
+      "filename": "20260703.webp",
+      "date": "2026-07-03",
+      "path": "/webp/20260703.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260702",
-      "path": "/webp/20260702.webp"
+      "filename": "20260702.webp",
+      "date": "2026-07-02",
+      "path": "/webp/20260702.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260701",
-      "path": "/webp/20260701.webp"
+      "filename": "20260701.webp",
+      "date": "2026-07-01",
+      "path": "/webp/20260701.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260630",
-      "path": "/webp/20260630.webp"
+      "filename": "20260630.webp",
+      "date": "2026-06-30",
+      "path": "/webp/20260630.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260629",
-      "path": "/webp/20260629.webp"
+      "filename": "20260629.webp",
+      "date": "2026-06-29",
+      "path": "/webp/20260629.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260628",
-      "path": "/webp/20260628.webp"
+      "filename": "20260628.webp",
+      "date": "2026-06-28",
+      "path": "/webp/20260628.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260627",
-      "path": "/webp/20260627.webp"
+      "filename": "20260627.webp",
+      "date": "2026-06-27",
+      "path": "/webp/20260627.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260626",
-      "path": "/webp/20260626.webp"
+      "filename": "20260626.webp",
+      "date": "2026-06-26",
+      "path": "/webp/20260626.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260625",
-      "path": "/webp/20260625.webp"
+      "filename": "20260625.webp",
+      "date": "2026-06-25",
+      "path": "/webp/20260625.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260624",
-      "path": "/webp/20260624.webp"
+      "filename": "20260624.webp",
+      "date": "2026-06-24",
+      "path": "/webp/20260624.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260623",
-      "path": "/webp/20260623.webp"
+      "filename": "20260623.webp",
+      "date": "2026-06-23",
+      "path": "/webp/20260623.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260622",
-      "path": "/webp/20260622.webp"
+      "filename": "20260622.webp",
+      "date": "2026-06-22",
+      "path": "/webp/20260622.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260621",
-      "path": "/webp/20260621.webp"
+      "filename": "20260621.webp",
+      "date": "2026-06-21",
+      "path": "/webp/20260621.webp",
+      "copyright": "",
+      "url": ""
     },
     {
-      "startdate": "20260620",
-      "path": "/webp/20260620.webp"
+      "filename": "20260620.webp",
+      "date": "2026-06-20",
+      "path": "/webp/20260620.webp",
+      "copyright": "",
+      "url": ""
     }
   ]
 }
