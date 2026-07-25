@@ -21,16 +21,16 @@ def downloads(url):
         json_data['images'][0]['url'].split("&")[0])
     start_date = json_data['images'][0]['startdate']
     
-    # ===== 一次性创建所有需要的目录 =====
+    # 确保所有需要的目录存在
     os.makedirs('./webp', exist_ok=True)
     os.makedirs('./json', exist_ok=True)
     os.makedirs('./1080pimages', exist_ok=True)
     os.makedirs('./images', exist_ok=True)
     
-    # 保存 JSON
+    # 保存原始 JSON
     open(f'./json/{start_date}.json', 'wb').write(requests.get(url=url, headers=headers).content)
     
-    # 只生成一张 WebP：从 1080p 图片转换，命名为 日期.webp
+    # 下载 1080p 图片并转换为 WebP
     pic_1080p = requests.get(validate_title(pic_url), stream=True)
     if pic_1080p.status_code == 200:
         png_1080p_path = f'./1080pimages/{start_date}.png'
@@ -43,17 +43,17 @@ def downloads(url):
             if img.mode in ('RGBA', 'LA'):
                 img = img.convert('RGB')
             
-            # 1. 生成 WebP（日期命名）
+            # 生成 WebP（日期命名）
             webp_path = f'./webp/{start_date}.webp'
             img.save(webp_path, 'WEBP', quality=85, method=6)
             shutil.copyfile(webp_path, f'./webp/latest.webp')
             print(f'Create {start_date} WebP Success!')
             
-            # 2. 生成 daily.jpeg（放在 webp 目录）
+            # 生成 daily.jpeg
             img.save('./webp/daily.jpeg', 'JPEG', quality=95, optimize=True)
             print(f'Create webp/daily.jpeg Success!')
             
-            # 3. 生成 original.jpeg（放在 webp 目录）
+            # 生成 original.jpeg
             img.save('./webp/original.jpeg', 'JPEG', quality=100)
             print(f'Create webp/original.jpeg Success!')
             
@@ -62,33 +62,51 @@ def downloads(url):
     else:
         print(f'Create {start_date} 1080P_PNG Failed!')
     
-    # 生成 index.json
+    # 生成 index.json（包含 copyright）
     generate_index_json()
     
     return
 
 def generate_index_json():
-    """扫描 webp 目录，生成 index.json"""
+    """扫描 webp 目录，生成包含 copyright 的 index.json"""
     webp_dir = './webp'
+    json_dir = './json'
     if not os.path.exists(webp_dir):
         print('webp directory not found')
         return
     
     images = []
     for filename in os.listdir(webp_dir):
-        if filename.endswith('.webp') and filename != 'latest.webp':
+        if filename.endswith('.webp') and filename != 'latest.webp' and filename != 'daily.jpeg' and filename != 'original.jpeg':
             date_str = filename.replace('.webp', '')
             if len(date_str) == 8 and date_str.isdigit():
+                # 格式化日期显示
+                formatted_date = date_str[:4] + '-' + date_str[4:6] + '-' + date_str[6:8]
+                # 从 json 目录读取版权信息
+                copyright_text = ''
+                json_path = os.path.join(json_dir, f'{date_str}.json')
+                if os.path.exists(json_path):
+                    try:
+                        with open(json_path, 'r', encoding='utf-8') as f:
+                            data = json.load(f)
+                            if data.get('images') and len(data['images']) > 0:
+                                copyright_text = data['images'][0].get('copyright', '')
+                    except Exception as e:
+                        print(f'读取 {json_path} 失败: {e}')
+                
                 images.append({
-                    'startdate': date_str,
-                    'path': f'/webp/{filename}'
+                    'filename': filename,
+                    'date': formatted_date,
+                    'path': f'/webp/{filename}',
+                    'copyright': copyright_text,
+                    'url': ''
                 })
     
-    images.sort(key=lambda x: x['startdate'], reverse=True)
+    images.sort(key=lambda x: x['date'], reverse=True)
     
     # 只保留最近90天
     ninety_days_ago = (datetime.now() - timedelta(days=90)).strftime('%Y%m%d')
-    images = [img for img in images if img['startdate'] >= ninety_days_ago]
+    images = [img for img in images if img['date'].replace('-', '') >= ninety_days_ago]
     
     with open('./webp/index.json', 'w', encoding='utf-8') as f:
         json.dump({'images': images}, f, ensure_ascii=False, indent=2)
