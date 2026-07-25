@@ -30,7 +30,16 @@ def downloads(url):
     # 保存原始 JSON
     open(f'./json/{start_date}.json', 'wb').write(requests.get(url=url, headers=headers).content)
     
-    # 下载 1080p 图片并转换为 WebP
+    # ===== 1. 下载原图到 images/ 目录 =====
+    pic = requests.get(pic_url, stream=True)
+    if pic.status_code == 200:
+        open(f'./images/{start_date}.png', 'wb').write(pic.content)
+        shutil.copyfile(f'./images/{start_date}.png', f'./images/latest.png')
+        print(f'Create {start_date} Original Image Success!')
+    else:
+        print(f'Create {start_date} Original Image Failed!')
+    
+    # ===== 2. 下载 1080p 图片并转换为 WebP =====
     pic_1080p = requests.get(validate_title(pic_url), stream=True)
     if pic_1080p.status_code == 200:
         png_1080p_path = f'./1080pimages/{start_date}.png'
@@ -62,15 +71,35 @@ def downloads(url):
     else:
         print(f'Create {start_date} 1080P_PNG Failed!')
     
-    # 生成 index.json
+    # 生成 index.json（包含 copyright）
     generate_index_json()
     
     return
 
 def generate_index_json():
-    """扫描 webp 目录，生成包含 copyright 的 index.json"""
+    """扫描 webp 目录，生成包含 copyright 的 index.json，并清理超过一年的原图"""
     webp_dir = './webp'
     json_dir = './json'
+    images_dir = './images'
+    
+    # ===== 清理超过一年的原图 =====
+    if os.path.exists(images_dir):
+        one_year_ago = (datetime.now() - timedelta(days=365)).strftime('%Y%m%d')
+        deleted_count = 0
+        for filename in os.listdir(images_dir):
+            if filename.endswith('.png') and filename != 'latest.png':
+                date_str = filename.replace('.png', '')
+                if len(date_str) == 8 and date_str.isdigit() and date_str < one_year_ago:
+                    try:
+                        os.remove(os.path.join(images_dir, filename))
+                        deleted_count += 1
+                        print(f'删除超过一年的原图: {filename}')
+                    except Exception as e:
+                        print(f'删除失败 {filename}: {e}')
+        if deleted_count > 0:
+            print(f'共删除 {deleted_count} 张超过一年的原图')
+    
+    # ===== 生成 index.json =====
     if not os.path.exists(webp_dir):
         print('webp directory not found')
         return
