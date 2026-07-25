@@ -238,8 +238,4 @@ MIT License © 2026 [chnbsdan](https://github.com/chnbsdan)
 - [在线预览](https://bing.shd.sryze.cc)
 - [API 文档](https://bing.shd.sryze.cc/api)
 - [站长博客](https://aoso.hangdn.com/)
-```
 
-### 保存位置
-
-把上面的内容保存为 `README.md`，放在 `bingtc` 仓库根目录，提交即可。
