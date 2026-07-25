@@ -2,36 +2,38 @@ import tool
 
 def create():
     imginfo = tool.get_date()
-    with open('GALLERY.md', 'w+') as fw:
+    
+    # GALLERY.md - 覆盖写入
+    with open('GALLERY.md', 'w+', encoding='utf-8') as fw:
         fw.write(imginfo[0] + '\n\n')
         fw.write('|      |      |      |\n')
         fw.write('| :----: | :----: | :----: |\n')
         i = 0
-        for dd in tool.get_list():
+        list_data = tool.get_list()
+        # 只取前 30 条
+        for dd in list_data[:30]:
             i = i + 1
             fw.write('|')
             fw.write(dd)
             if (i % 3 == 0):
                 fw.write("|\n")
-        if (len(tool.get_list()) % 3 != 0):
+        if (len(list_data[:30]) % 3 != 0):
             fw.write('|')
         print(f'Create GALLERY.md Success!')
 
-    # 改成 'a+' 模式，文件不存在则创建
-    with open('bing-url.md', 'a+') as fi:
-        fi.seek(0)
-        content = fi.read()
-        fi.seek(0, 0)
-        fi.write(imginfo[1] + '\n\n' + content)
+    # bing-url.md - 覆盖写入，只保留最新一条
+    with open('bing-url.md', 'w+', encoding='utf-8') as fi:
+        fi.write(imginfo[1] + '\n\n')
         print(f'Create bing-url.md Success!')
 
-    with open('wallpaper.md', 'w+') as fw:
+    # wallpaper.md - 覆盖写入
+    with open('wallpaper.md', 'w+', encoding='utf-8') as fw:
         fw.write("---" + '\n')
         fw.write("title: wallpaper" + '\n')
         fw.write("date: 2022-01-01 19:24:56" + '\n')
         fw.write("type: 'gallery'" + '\n')
         fw.write("---" + '\n\n')
-        with open('GALLERY.md', 'r') as fi:
+        with open('GALLERY.md', 'r', encoding='utf-8') as fi:
             content = fi.read()
         fw.write(content)
         print(f'Create wallpaper.md Success!')
