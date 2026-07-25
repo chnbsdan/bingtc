@@ -1,6 +1,6 @@
 import requests
 import re
-
+import os
 
 def validate_title(raw):
     new_title = re.sub("UHD.jpg", "1920x1080.jpg", raw)
@@ -19,34 +19,24 @@ def get_date():
     title = json_data['images'][0]['title']
     startdate = json_data['images'][0]['startdate']
 
-    # 用 'a+' 模式，文件不存在则自动创建
-    with open('1080purl.txt', 'a+', encoding='utf-8') as f:
-        f.seek(0)
-        content = f.read()
-        f.seek(0, 0)
-        f.write(validate_title(images_url.split("&")[0]) + '\n' + content)
-        print(f'Create 1080purl.txt Success!')
+    # ===== 修复：限制每个文件只保留最近 30 条 =====
+    def update_file(filename, new_line):
+        lines = []
+        if os.path.exists(filename):
+            with open(filename, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+        # 插入新行到开头
+        lines.insert(0, new_line + '\n')
+        # 只保留最近 30 条
+        lines = lines[:30]
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.writelines(lines)
+        print(f'Update {filename} Success! (共 {len(lines)} 条)')
 
-    with open('url.txt', 'a+', encoding='utf-8') as f:
-        f.seek(0)
-        content = f.read()
-        f.seek(0, 0)
-        f.write(images_url.split("&")[0] + '\n' + content)
-        print(f'Create url.txt Success!')
-
-    with open('startdate.txt', 'a+', encoding='utf-8') as f:
-        f.seek(0)
-        content = f.read()
-        f.seek(0, 0)
-        f.write(startdate + '\n' + content)
-        print(f'Create startdate.txt Success!')
-
-    with open('copyright.txt', 'a+', encoding='utf-8') as f:
-        f.seek(0)
-        content = f.read()
-        f.seek(0, 0)
-        f.write(copyright + '\n' + content)
-        print(f'Create copyright.txt Success!')
+    update_file('1080purl.txt', validate_title(images_url.split("&")[0]))
+    update_file('url.txt', images_url.split("&")[0])
+    update_file('startdate.txt', startdate)
+    update_file('copyright.txt', copyright)
 
     topimg = '![{}]({}&w=1000) Today:[{}]({})'.format(title, images_url.split("&")[0], copyright, images_url.split("&")[0])
     img_info = '{} | [{}]({})'.format(startdate, copyright, images_url.split("&")[0])
@@ -58,7 +48,7 @@ def get_list():
     startdate = []
     
     try:
-        with open('url.txt', 'r') as fu:
+        with open('url.txt', 'r', encoding='utf-8') as fu:
             for line in fu:
                 if line != '\n':
                     url.append(line[:-1])
@@ -66,7 +56,7 @@ def get_list():
         pass
 
     try:
-        with open('copyright.txt', 'r') as fc:
+        with open('copyright.txt', 'r', encoding='utf-8') as fc:
             for line in fc:
                 if line != '\n':
                     copyright.append(line[:-1])
@@ -74,7 +64,7 @@ def get_list():
         pass
 
     try:
-        with open('startdate.txt', 'r') as fd:
+        with open('startdate.txt', 'r', encoding='utf-8') as fd:
             for line in fd:
                 if line != '\n':
                     startdate.append(line[:-1])
