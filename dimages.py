@@ -30,7 +30,7 @@ def downloads(url):
     # 保存原始 JSON
     open(f'./json/{start_date}.json', 'wb').write(requests.get(url=url, headers=headers).content)
     
-    # ===== 1. 下载原图到 images/ 目录 =====
+    # ===== 新增：下载原图到 images/ 目录 =====
     pic = requests.get(pic_url, stream=True)
     if pic.status_code == 200:
         open(f'./images/{start_date}.png', 'wb').write(pic.content)
@@ -39,7 +39,7 @@ def downloads(url):
     else:
         print(f'Create {start_date} Original Image Failed!')
     
-    # ===== 2. 下载 1080p 图片并转换为 WebP =====
+    # 下载 1080p 图片并转换为 WebP
     pic_1080p = requests.get(validate_title(pic_url), stream=True)
     if pic_1080p.status_code == 200:
         png_1080p_path = f'./1080pimages/{start_date}.png'
@@ -71,7 +71,7 @@ def downloads(url):
     else:
         print(f'Create {start_date} 1080P_PNG Failed!')
     
-    # 生成 index.json（包含 copyright）
+    # 生成 index.json
     generate_index_json()
     
     return
