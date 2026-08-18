@@ -1,2 +1,2 @@
-20260817 | [Three false clownfish in a sea anemone, Cabilao Island, Bohol, Philippines (© Franco Banfi/Nature Picture Library)](https://cn.bing.com/th?id=OHR.CabilaoClowns_EN-US6302440247_UHD.jpg)
+20260818 | [Aerial view of Palmanova, a fortress city in Friuli, Italy (© Riccardo Saponi/Getty Images)](https://cn.bing.com/th?id=OHR.Palmanova_EN-US0340289339_UHD.jpg)
 
