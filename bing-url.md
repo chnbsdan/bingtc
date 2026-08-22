@@ -1,2 +1,2 @@
-20260821 | [Winding road of Julier Pass, Switzerland (© Westend61/Getty Images)](https://cn.bing.com/th?id=OHR.JulierPass_EN-US2643379571_UHD.jpg)
+20260822 | [Common blue butterfly, Devon, England (© Ross Hoddinott/Nature Picture Library)](https://cn.bing.com/th?id=OHR.CommonBlue_EN-US2760688799_UHD.jpg)
 
