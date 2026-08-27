@@ -1,2 +1,2 @@
-20260826 | [Auroras over Kirkjufell, Iceland (© Cavan Images/Alamy)](https://cn.bing.com/th?id=OHR.AurorasIceland_EN-US3293282785_UHD.jpg)
+20260827 | [Lesser flamingo flock at sunrise, Lake Magadi, Kenya (© Denis-Huot/Nature Picture Library)](https://cn.bing.com/th?id=OHR.LakeMagadi_EN-US3401664434_UHD.jpg)
 
