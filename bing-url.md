@@ -1,2 +1,2 @@
-20260901 | [Horsehair parachute fungus, Belarus (© Máté/Nature Picture Library)](https://cn.bing.com/th?id=OHR.HorseHairShroom_EN-US3885857486_UHD.jpg)
+20260902 | [Traditional beach huts, Southwold, Suffolk Heritage Coast, England (© stevendocwra/Getty Images)](https://cn.bing.com/th?id=OHR.SuffolkHuts_EN-US3987062531_UHD.jpg)
 
