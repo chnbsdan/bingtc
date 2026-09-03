@@ -1,2 +1,2 @@
-20260902 | [Traditional beach huts, Southwold, Suffolk Heritage Coast, England (© stevendocwra/Getty Images)](https://cn.bing.com/th?id=OHR.SuffolkHuts_EN-US3987062531_UHD.jpg)
+20260903 | [Coyote Buttes, Vermilion Cliffs National Monument, Arizona (© James Hager/Getty Images)](https://cn.bing.com/th?id=OHR.AZWilderness_EN-US4070936347_UHD.jpg)
 
