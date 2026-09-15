@@ -1,2 +1,2 @@
-20260914 | [Field of kochia plants, China (© lingqi xie/Getty Images)](https://cn.bing.com/th?id=OHR.KochiaChina_EN-US5037126636_UHD.jpg)
+20260915 | [Fort Union National Monument, New Mexico (© zrfphoto/Getty Images)](https://cn.bing.com/th?id=OHR.FortUnion_EN-US5138724452_UHD.jpg)
 
