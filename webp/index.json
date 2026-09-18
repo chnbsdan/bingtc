@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20260919.webp",
+      "date": "2026-09-19",
+      "path": "/webp/20260919.webp",
+      "copyright": "阿尔卑斯长号演奏者，巴伐利亚州，德国 (© U. J. Alexander/Shutterstock)",
+      "url": "https://www.bing.com/th?id=OHR.AlphornBavaria_ZH-CN5896237112_UHD.jpg"
+    },
+    {
       "filename": "20260918.webp",
       "date": "2026-09-18",
       "path": "/webp/20260918.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260621.webp",
       "copyright": "King penguin father checking egg (© McDonald Wildlife Photography Inc./Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.EggDad_EN-US6390221455_UHD.jpg"
-    },
-    {
-      "filename": "20260620.webp",
-      "date": "2026-06-20",
-      "path": "/webp/20260620.webp",
-      "copyright": "Arched iceberg floating off the western Antarctic Peninsula, Southern Ocean (© Steven Kazlowski/Nature Picture Library)",
-      "url": "https://www.bing.com/th?id=OHR.ArchedIceberg_EN-US6345786269_UHD.jpg"
     }
   ]
 }
