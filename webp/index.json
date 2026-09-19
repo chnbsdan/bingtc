@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20260920.webp",
+      "date": "2026-09-20",
+      "path": "/webp/20260920.webp",
+      "copyright": "日落时分的埃菲尔铁塔，巴黎，法国 (© Alexander Spatari/Getty Images)",
+      "url": "https://www.bing.com/th?id=OHR.ParisSunset_ZH-CN6050686638_UHD.jpg"
+    },
+    {
       "filename": "20260919.webp",
       "date": "2026-09-19",
       "path": "/webp/20260919.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260622.webp",
       "copyright": "Quinault rainforest, Olympic National Park, Washington state (© Chris Moore/Tandem Stills + Motion)",
       "url": "https://www.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_UHD.jpg"
-    },
-    {
-      "filename": "20260621.webp",
-      "date": "2026-06-21",
-      "path": "/webp/20260621.webp",
-      "copyright": "King penguin father checking egg (© McDonald Wildlife Photography Inc./Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.EggDad_EN-US6390221455_UHD.jpg"
     }
   ]
 }
