@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20260922.webp",
+      "date": "2026-09-22",
+      "path": "/webp/20260922.webp",
+      "copyright": "瓜兹曼山口附近的秋日山杨林，犹他州，美国 (© Danita Delimont/Shutterstock)",
+      "url": "https://www.bing.com/th?id=OHR.FallAspens_ZH-CN7235054933_UHD.jpg"
+    },
+    {
       "filename": "20260921.webp",
       "date": "2026-09-21",
       "path": "/webp/20260921.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260624.webp",
       "copyright": "Butterfly pollinating on yellow flower (© lzh/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.BFPollin_EN-US6519187095_UHD.jpg"
-    },
-    {
-      "filename": "20260623.webp",
-      "date": "2026-06-23",
-      "path": "/webp/20260623.webp",
-      "copyright": "Mount Fuji on Honshu Island, Japan (© phutthiseth thongtae/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.Fujisan_EN-US6479372200_UHD.jpg"
     }
   ]
 }
