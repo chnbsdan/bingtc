@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20260924.webp",
+      "date": "2026-09-24",
+      "path": "/webp/20260924.webp",
+      "copyright": "黑色熔岩海滩鸟瞰图，埃尔戈尔福，兰萨罗特岛，加那利群岛，西班牙 (© Westend61/Adobe Stock)",
+      "url": "https://www.bing.com/th?id=OHR.ElGolfo_ZH-CN8329995759_UHD.jpg"
+    },
+    {
       "filename": "20260923.webp",
       "date": "2026-09-23",
       "path": "/webp/20260923.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260626.webp",
       "copyright": "The River Thames, London, England (© Daniel Lange/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.ThamesSummer_EN-US6783349970_UHD.jpg"
-    },
-    {
-      "filename": "20260625.webp",
-      "date": "2026-06-25",
-      "path": "/webp/20260625.webp",
-      "copyright": "Buildings on Grand-Place Square in Brussels, Belgium (© Vladislav Zolotov/Getty Images Plus)",
-      "url": "https://www.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_UHD.jpg"
     }
   ]
 }
