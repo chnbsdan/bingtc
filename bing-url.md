@@ -1,2 +1,2 @@
-20260924 | [Aerial view of black lava beach, El Golfo, Lanzarote, Canary Islands, Spain (© Westend61/Adobe Stock)](https://cn.bing.com/th?id=OHR.ElGolfo_EN-US9261454857_UHD.jpg)
+20260925 | [Chinese lanterns for Mid-Autumn Festival celebration (© LeeYiuTung/Getty Images)](https://cn.bing.com/th?id=OHR.MidAutumn2026_EN-US9341405351_UHD.jpg)
 

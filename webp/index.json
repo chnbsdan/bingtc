@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20260926.webp",
+      "date": "2026-09-26",
+      "path": "/webp/20260926.webp",
+      "copyright": "熊耳国家纪念区附近的雪松台地和骡子角，犹他州，美国 (© Jeff Clay/Tandem Stills + Motion)",
+      "url": "https://www.bing.com/th?id=OHR.BearsEars_ZH-CN0496897450_UHD.jpg"
+    },
+    {
       "filename": "20260925.webp",
       "date": "2026-09-25",
       "path": "/webp/20260925.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260628.webp",
       "copyright": "Saguaro cacti near Windgate Pass, McDowell Range, Arizona, USA (© Eric Mischke/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_UHD.jpg"
-    },
-    {
-      "filename": "20260627.webp",
-      "date": "2026-06-27",
-      "path": "/webp/20260627.webp",
-      "copyright": "Driftwood on Boneyard Beach, Hunting Island, South Carolina (© Frances/Adobe Stock)",
-      "url": "https://www.bing.com/th?id=OHR.BoneyardBeach_EN-US8247496696_UHD.jpg"
     }
   ]
 }
