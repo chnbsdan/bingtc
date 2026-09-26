@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20260927.webp",
+      "date": "2026-09-27",
+      "path": "/webp/20260927.webp",
+      "copyright": "海笔上的装饰蟹，科莫多国家公园，印度尼西亚 (© Alex Mustard/Nature Picture Library)",
+      "url": "https://www.bing.com/th?id=OHR.DecoCrab_ZH-CN0973306994_UHD.jpg"
+    },
+    {
       "filename": "20260926.webp",
       "date": "2026-09-26",
       "path": "/webp/20260926.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260629.webp",
       "copyright": "Bora Bora and its lagoon, South Pacific, French Polynesia (© Frederick Millett/Shutterstock)",
       "url": "https://www.bing.com/th?id=OHR.BoraBoraLagoon_EN-US1491116478_UHD.jpg"
-    },
-    {
-      "filename": "20260628.webp",
-      "date": "2026-06-28",
-      "path": "/webp/20260628.webp",
-      "copyright": "Saguaro cacti near Windgate Pass, McDowell Range, Arizona, USA (© Eric Mischke/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_UHD.jpg"
     }
   ]
 }
