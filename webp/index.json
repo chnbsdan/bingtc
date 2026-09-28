@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20260929.webp",
+      "date": "2026-09-29",
+      "path": "/webp/20260929.webp",
+      "copyright": "卡西洛夫河冰川融水滋养的湛蓝河水，阿拉斯加州，美国 (© jared lloyd/Getty Images)",
+      "url": "https://www.bing.com/th?id=OHR.KasilofRiver_ZH-CN2394091052_UHD.jpg"
+    },
+    {
       "filename": "20260928.webp",
       "date": "2026-09-28",
       "path": "/webp/20260928.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260701.webp",
       "copyright": "Dungeon Provincial Park, Newfoundland and Labrador, Canada (© Kaitlyn McLachlan/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.DungeonPark_EN-US2499621341_UHD.jpg"
-    },
-    {
-      "filename": "20260630.webp",
-      "date": "2026-06-30",
-      "path": "/webp/20260630.webp",
-      "copyright": "Giraffes at sunset in the Masai Mara National Reserve, Kenya (© danm/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_UHD.jpg"
     }
   ]
 }
