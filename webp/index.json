@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261002.webp",
+      "date": "2026-10-02",
+      "path": "/webp/20261002.webp",
+      "copyright": "查图加河，阿巴拉契亚山脉，北卡罗来纳州，美国 (© mtilghma/Getty Images)",
+      "url": "https://www.bing.com/th?id=OHR.ChattoogaRiver_ZH-CN9453791496_UHD.jpg"
+    },
+    {
       "filename": "20261001.webp",
       "date": "2026-10-01",
       "path": "/webp/20261001.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260704.webp",
       "copyright": "Liberty Bell and Independence Hall, Independence National Historical Park, Philadelphia, Pennsylvania (© f11photo/Shutterstock)",
       "url": "https://www.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_UHD.jpg"
-    },
-    {
-      "filename": "20260703.webp",
-      "date": "2026-07-03",
-      "path": "/webp/20260703.webp",
-      "copyright": "Fireflies glowing above a stream, Okayama Prefecture, Japan (© tdub303/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg"
     }
   ]
 }
