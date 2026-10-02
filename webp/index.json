@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261003.webp",
+      "date": "2026-10-03",
+      "path": "/webp/20261003.webp",
+      "copyright": "美国阿拉斯加州克拉克湖国家公园和自然保护区银鲑溪中的棕熊 (© Danny Green/Nature Picture Library)",
+      "url": "https://www.bing.com/th?id=OHR.GrizzlySwim_ZH-CN1005455737_UHD.jpg"
+    },
+    {
       "filename": "20261002.webp",
       "date": "2026-10-02",
       "path": "/webp/20261002.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260705.webp",
       "copyright": "Lavender rows, Plateau de Valensole, Provence, France (© Robert Harding/Shutterstock)",
       "url": "https://www.bing.com/th?id=OHR.LavenderRows_EN-US2831933520_UHD.jpg"
-    },
-    {
-      "filename": "20260704.webp",
-      "date": "2026-07-04",
-      "path": "/webp/20260704.webp",
-      "copyright": "Liberty Bell and Independence Hall, Independence National Historical Park, Philadelphia, Pennsylvania (© f11photo/Shutterstock)",
-      "url": "https://www.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_UHD.jpg"
     }
   ]
 }
