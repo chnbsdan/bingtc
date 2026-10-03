@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261004.webp",
+      "date": "2026-10-04",
+      "path": "/webp/20261004.webp",
+      "copyright": "阿尔忒弥斯1号月球火箭，39B发射台，肯尼迪航天中心，佛罗里达州，2022年6月15日 (© EVA MARIE UZCATEGUI/Getty Images)",
+      "url": "https://www.bing.com/th?id=OHR.ArtemisRocket_ZH-CN1768541365_UHD.jpg"
+    },
+    {
       "filename": "20261003.webp",
       "date": "2026-10-03",
       "path": "/webp/20261003.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260706.webp",
       "copyright": "Syracuse at sunset, Sicily, Italy (© Balate Dorin/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.SyracuseItaly_EN-US3071727282_UHD.jpg"
-    },
-    {
-      "filename": "20260705.webp",
-      "date": "2026-07-05",
-      "path": "/webp/20260705.webp",
-      "copyright": "Lavender rows, Plateau de Valensole, Provence, France (© Robert Harding/Shutterstock)",
-      "url": "https://www.bing.com/th?id=OHR.LavenderRows_EN-US2831933520_UHD.jpg"
     }
   ]
 }
