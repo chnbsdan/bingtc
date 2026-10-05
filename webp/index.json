@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261006.webp",
+      "date": "2026-10-06",
+      "path": "/webp/20261006.webp",
+      "copyright": "丹霞地貌，张掖国家地质公园，甘肃省，中国 (© Weiquan Lin/Getty Images)",
+      "url": "https://www.bing.com/th?id=OHR.DanxiaLandform_ZH-CN2386060246_UHD.jpg"
+    },
+    {
       "filename": "20261005.webp",
       "date": "2026-10-05",
       "path": "/webp/20261005.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260708.webp",
       "copyright": "Sunrise at Lake Atitlán, Guatemala (© shayes17/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.LakeAtitlan_EN-US3747076006_UHD.jpg"
-    },
-    {
-      "filename": "20260707.webp",
-      "date": "2026-07-07",
-      "path": "/webp/20260707.webp",
-      "copyright": "Plate-billed mountain toucan with orchids, Ecuador (© Murray Cooper/Minden Pictures)",
-      "url": "https://www.bing.com/th?id=OHR.MountainToucanOrchids_EN-US3433249651_UHD.jpg"
     }
   ]
 }
