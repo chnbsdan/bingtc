@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261007.webp",
+      "date": "2026-10-07",
+      "path": "/webp/20261007.webp",
+      "copyright": "覆满苔藓的岩石，英国格洛斯特郡谜林，迪恩森林，格洛斯特郡，英格兰 (© Fulcanelli_AOS/Getty Images)",
+      "url": "https://www.bing.com/th?id=OHR.ForestofDean_ZH-CN2654753621_UHD.jpg"
+    },
+    {
       "filename": "20261006.webp",
       "date": "2026-10-06",
       "path": "/webp/20261006.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260709.webp",
       "copyright": "Rice fields at Sapa, Lào Cai, Vietnam (© Anujak Jaimook/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.SapaVietnam_EN-US4008171614_UHD.jpg"
-    },
-    {
-      "filename": "20260708.webp",
-      "date": "2026-07-08",
-      "path": "/webp/20260708.webp",
-      "copyright": "Sunrise at Lake Atitlán, Guatemala (© shayes17/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.LakeAtitlan_EN-US3747076006_UHD.jpg"
     }
   ]
 }
