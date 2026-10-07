@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261008.webp",
+      "date": "2026-10-08",
+      "path": "/webp/20261008.webp",
+      "copyright": "印度洋马约特岛，一只呈防御姿态的章鱼 (© Gabriel Barathieu/Minden Pictures)",
+      "url": "https://www.bing.com/th?id=OHR.MayotteOctopus_ZH-CN2837659998_UHD.jpg"
+    },
+    {
       "filename": "20261007.webp",
       "date": "2026-10-07",
       "path": "/webp/20261007.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260710.webp",
       "copyright": "Aerial view of land and ocean, Victoria, Australia (© Nearmap/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.VictoriaBeach_EN-US7607379912_UHD.jpg"
-    },
-    {
-      "filename": "20260709.webp",
-      "date": "2026-07-09",
-      "path": "/webp/20260709.webp",
-      "copyright": "Rice fields at Sapa, Lào Cai, Vietnam (© Anujak Jaimook/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.SapaVietnam_EN-US4008171614_UHD.jpg"
     }
   ]
 }
