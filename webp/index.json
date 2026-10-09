@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261010.webp",
+      "date": "2026-10-10",
+      "path": "/webp/20261010.webp",
+      "copyright": "蒙特雷湾上空的双冠鸬鹚，加利福尼亚州，美国 (© Hiroya Minakuchi/Minden Pictures)",
+      "url": "https://www.bing.com/th?id=OHR.CormorantsFlight_ZH-CN0770863330_UHD.jpg"
+    },
+    {
       "filename": "20261009.webp",
       "date": "2026-10-09",
       "path": "/webp/20261009.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260712.webp",
       "copyright": "Katahdin Woods and Waters National Monument, Maine (© Cavan Images/Offset/Shutterstock)",
       "url": "https://www.bing.com/th?id=OHR.KatahdinWWNM_EN-US8982810797_UHD.jpg"
-    },
-    {
-      "filename": "20260711.webp",
-      "date": "2026-07-11",
-      "path": "/webp/20260711.webp",
-      "copyright": "Port de Saint-Goustan, Auray, Brittany, France (© Rolf E. Staerk/Shutterstock)",
-      "url": "https://www.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_UHD.jpg"
     }
   ]
 }
