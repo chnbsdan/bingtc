@@ -1,2 +1,2 @@
-20261009 | [View of the Sanguinaires Islands from Corsica, France (© Francesco Riccardo Iacomino/Getty Images)](https://cn.bing.com/th?id=OHR.IlesSanguinaires_EN-CA1335462039_UHD.jpg)
+20261010 | [Double-crested cormorants over Monterey Bay, California (© Hiroya Minakuchi/Minden Pictures)](https://cn.bing.com/th?id=OHR.CormorantsFlight_EN-US5972403355_UHD.jpg)
 
