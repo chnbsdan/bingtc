@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261013.webp",
+      "date": "2026-10-13",
+      "path": "/webp/20261013.webp",
+      "copyright": "普利特维采湖群国家公园，克罗地亚 (© Jan Wlodarczyk/Alamy)",
+      "url": "https://www.bing.com/th?id=OHR.PlitviceAutumn_ZH-CN5646237897_UHD.jpg"
+    },
+    {
       "filename": "20261012.webp",
       "date": "2026-10-12",
       "path": "/webp/20261012.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260715.webp",
       "copyright": "Marie Lake, John Muir Wilderness near Bishop, California (© Steve Dunleavy/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.MarieLake_EN-US0365186943_UHD.jpg"
-    },
-    {
-      "filename": "20260714.webp",
-      "date": "2026-07-14",
-      "path": "/webp/20260714.webp",
-      "copyright": "Lemon shark pup in mangrove forest, Eleuthera, Bahamas (© Shane Gross/Nature Picture Library)",
-      "url": "https://www.bing.com/th?id=OHR.LemonShark_EN-US9828936448_UHD.jpg"
     }
   ]
 }
