@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261015.webp",
+      "date": "2026-10-15",
+      "path": "/webp/20261015.webp",
+      "copyright": "弗罗茨瓦夫集市广场景观，摄自女巫桥，弗罗茨瓦夫，波兰 (© Piotr Mitelski/Shutterstock)",
+      "url": "https://www.bing.com/th?id=OHR.WroclawPoland_ZH-CN6042428292_UHD.jpg"
+    },
+    {
       "filename": "20261014.webp",
       "date": "2026-10-14",
       "path": "/webp/20261014.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260717.webp",
       "copyright": "Sunbeds on the beach at Vai, Crete, Greece (© borchee/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.VaiUmbrellas_EN-US8985051242_UHD.jpg"
-    },
-    {
-      "filename": "20260716.webp",
-      "date": "2026-07-16",
-      "path": "/webp/20260716.webp",
-      "copyright": "Navy Pier, Chicago, Illinois (© Christopher.F Photography/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.NavyPier_EN-US1069960047_UHD.jpg"
     }
   ]
 }
