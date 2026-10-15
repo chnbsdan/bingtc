@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261016.webp",
+      "date": "2026-10-16",
+      "path": "/webp/20261016.webp",
+      "copyright": "斯奈费尔斯山，里奇韦附近的圣胡安山脉，科罗拉多州，美国 (© lightphoto/Getty Images)",
+      "url": "https://www.bing.com/th?id=OHR.SneffelsAutumn_ZH-CN3002661429_UHD.jpg"
+    },
+    {
       "filename": "20261015.webp",
       "date": "2026-10-15",
       "path": "/webp/20261015.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260718.webp",
       "copyright": "恶魔桥在克罗姆劳杜鹃花公园，萨克森州，德国 (© Mike Mareen/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.DevilsBridge_ZH-CN2164982440_UHD.jpg"
-    },
-    {
-      "filename": "20260717.webp",
-      "date": "2026-07-17",
-      "path": "/webp/20260717.webp",
-      "copyright": "Sunbeds on the beach at Vai, Crete, Greece (© borchee/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.VaiUmbrellas_EN-US8985051242_UHD.jpg"
     }
   ]
 }
