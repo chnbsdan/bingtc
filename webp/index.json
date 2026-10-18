@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261019.webp",
+      "date": "2026-10-19",
+      "path": "/webp/20261019.webp",
+      "copyright": "大运河，威尼斯，意大利 (© Juan Romero/Cavan Images)",
+      "url": "https://www.bing.com/th?id=OHR.VeniceSunrise_ZH-CN5251815339_UHD.jpg"
+    },
+    {
       "filename": "20261018.webp",
       "date": "2026-10-18",
       "path": "/webp/20261018.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260721.webp",
       "copyright": "圣卡塔琳娜拱门，安提瓜，危地马拉 (© Filippo Maria Bianchi/Getty Images)",
       "url": "https://www.bing.com/th?id=OHR.SantaCatalina_ZH-CN6223370790_UHD.jpg"
-    },
-    {
-      "filename": "20260720.webp",
-      "date": "2026-07-20",
-      "path": "/webp/20260720.webp",
-      "copyright": "月球与地球由阿耳忒弥斯2号机组人员拍摄 (© NASA)",
-      "url": "https://www.bing.com/th?id=OHR.Artemis_ZH-CN3540365575_UHD.jpg"
     }
   ]
 }
