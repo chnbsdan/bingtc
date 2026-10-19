@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261020.webp",
+      "date": "2026-10-20",
+      "path": "/webp/20261020.webp",
+      "copyright": "褐喉三趾树懒，塔拉曼卡旧港，哥斯达黎加 (© Suzi Eszterhas/Minden Pictures)",
+      "url": "https://www.bing.com/th?id=OHR.BrownSloth_ZH-CN5776383136_UHD.jpg"
+    },
+    {
       "filename": "20261019.webp",
       "date": "2026-10-19",
       "path": "/webp/20261019.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260722.webp",
       "copyright": "珊瑚礁与海滩在拉贾安帕特，印度尼西亚 (© SergeUWPhoto/Shutterstock)",
       "url": "https://www.bing.com/th?id=OHR.CoralAwareness_ZH-CN1621627126_UHD.jpg"
-    },
-    {
-      "filename": "20260721.webp",
-      "date": "2026-07-21",
-      "path": "/webp/20260721.webp",
-      "copyright": "圣卡塔琳娜拱门，安提瓜，危地马拉 (© Filippo Maria Bianchi/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.SantaCatalina_ZH-CN6223370790_UHD.jpg"
     }
   ]
 }
