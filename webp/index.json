@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "filename": "20261022.webp",
+      "date": "2026-10-22",
+      "path": "/webp/20261022.webp",
+      "copyright": "内藏山国立公园的秋景，韩国 (© Twenty47studio/Getty Images)",
+      "url": "https://www.bing.com/th?id=OHR.NaejangsanNP_ZH-CN6538893004_UHD.jpg"
+    },
+    {
       "filename": "20261021.webp",
       "date": "2026-10-21",
       "path": "/webp/20261021.webp",
@@ -629,13 +636,6 @@
       "path": "/webp/20260724.webp",
       "copyright": "美洲红鹳群在伊莎贝拉岛，加拉帕戈斯群岛，厄瓜多尔 (© Tui De Roy/Nature Picture Library)",
       "url": "https://www.bing.com/th?id=OHR.GalapagosFlamingos_ZH-CN1152519387_UHD.jpg"
-    },
-    {
-      "filename": "20260723.webp",
-      "date": "2026-07-23",
-      "path": "/webp/20260723.webp",
-      "copyright": "粉红色大丽花 (© Harald Biebel/Getty Images)",
-      "url": "https://www.bing.com/th?id=OHR.PinkDahlia_ZH-CN2259107800_UHD.jpg"
     }
   ]
 }
